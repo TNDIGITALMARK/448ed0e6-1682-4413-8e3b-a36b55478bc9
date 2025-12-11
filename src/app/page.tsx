@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Navigation } from '@/components/navigation';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Target, Users, DollarSign } from 'lucide-react';
+import { ArrowRight, Target, Users, DollarSign, Shield, Crown, Coins, Lock, TrendingUp, Award } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -42,6 +43,17 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background with atmospheric layers */}
           <div className="absolute inset-0 bg-gradient-to-b from-color-shadow via-color-mahogany-dark to-color-shadow">
+            {/* Background Image */}
+            <div className="absolute inset-0 opacity-20">
+              <Image
+                src="/generated/speakeasy-interior.png"
+                alt="Speakeasy Interior"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
             {/* Animated fog effect */}
             <div className="absolute inset-0 opacity-30">
               <div className="absolute inset-0 bg-gradient-to-t from-transparent via-color-swamp-green-dark/20 to-transparent animate-pulse"
@@ -58,7 +70,7 @@ export default function Home() {
           <div className="container relative z-10 px-4 py-32 mt-20">
             <div className="max-w-5xl mx-auto text-center space-y-12">
               {/* Badge */}
-              <div className="inline-flex items-center gap-3 bg-color-mahogany/80 border-2 border-gold px-6 py-3 rounded shadow-vintage-md">
+              <div className="inline-flex items-center gap-3 bg-color-mahogany/80 border-2 border-gold px-6 py-3 rounded shadow-vintage-md backdrop-blur-sm">
                 <span className="text-3xl">🏛️</span>
                 <span className="font-decorative text-gold text-lg tracking-wider">
                   EST. 1920
@@ -148,6 +160,223 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-color-shadow to-transparent" />
         </section>
 
+        {/* Our Operations Section */}
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-color-shadow via-color-mahogany-dark/60 to-color-shadow" />
+
+          {/* Art Deco Pattern Background */}
+          <div className="absolute inset-0 opacity-10">
+            <Image
+              src="/generated/art-deco-pattern.png"
+              alt="Art Deco Pattern"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
+
+          <div className="container relative z-10 px-4">
+            <div className="max-w-6xl mx-auto space-y-16">
+              {/* Section Header */}
+              <div className="text-center space-y-6">
+                <div className="inline-block bg-color-swamp-green/20 border border-gold/30 px-6 py-2 rounded-full">
+                  <span className="text-gold text-sm font-bold tracking-wider uppercase">Our Empire</span>
+                </div>
+                <h2 className="font-heading text-5xl lg:text-6xl text-gold">
+                  THE FAMILY BUSINESS
+                </h2>
+                <p className="text-xl text-cream-dark max-w-3xl mx-auto leading-relaxed">
+                  Built on loyalty, respect, and knowing the right people in the right places.
+                  Our operations span across multiple territories with unmatched efficiency.
+                </p>
+              </div>
+
+              {/* Operations Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Operation Card 1 */}
+                <div className="group relative bg-color-mahogany-dark/90 backdrop-blur border-2 border-swamp-green-dark rounded-lg p-8 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative space-y-4">
+                    <div className="w-16 h-16 bg-color-swamp-green/30 rounded-lg flex items-center justify-center border border-gold/20">
+                      <Shield className="w-8 h-8 text-gold" />
+                    </div>
+                    <h3 className="font-heading text-2xl text-gold">Protection Services</h3>
+                    <p className="text-cream-dark leading-relaxed">
+                      We ensure the safety and security of legitimate businesses throughout our territories.
+                      Peace of mind comes at a reasonable price.
+                    </p>
+                    <div className="pt-4 flex items-center text-gold-light text-sm font-bold">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Operation Card 2 */}
+                <div className="group relative bg-color-mahogany-dark/90 backdrop-blur border-2 border-swamp-green-dark rounded-lg p-8 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative space-y-4">
+                    <div className="w-16 h-16 bg-color-swamp-green/30 rounded-lg flex items-center justify-center border border-gold/20">
+                      <Lock className="w-8 h-8 text-gold" />
+                    </div>
+                    <h3 className="font-heading text-2xl text-gold">Import & Export</h3>
+                    <p className="text-cream-dark leading-relaxed">
+                      Exclusive distribution of rare goods and specialty items.
+                      We have connections that span across all kingdoms and realms.
+                    </p>
+                    <div className="pt-4 flex items-center text-gold-light text-sm font-bold">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Operation Card 3 */}
+                <div className="group relative bg-color-mahogany-dark/90 backdrop-blur border-2 border-swamp-green-dark rounded-lg p-8 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative space-y-4">
+                    <div className="w-16 h-16 bg-color-swamp-green/30 rounded-lg flex items-center justify-center border border-gold/20">
+                      <Crown className="w-8 h-8 text-gold" />
+                    </div>
+                    <h3 className="font-heading text-2xl text-gold">Entertainment Venues</h3>
+                    <p className="text-cream-dark leading-relaxed">
+                      The finest speakeasies, clubs, and establishments where the elite gather.
+                      Exclusive membership required.
+                    </p>
+                    <div className="pt-4 flex items-center text-gold-light text-sm font-bold">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Operation Card 4 */}
+                <div className="group relative bg-color-mahogany-dark/90 backdrop-blur border-2 border-swamp-green-dark rounded-lg p-8 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative space-y-4">
+                    <div className="w-16 h-16 bg-color-swamp-green/30 rounded-lg flex items-center justify-center border border-gold/20">
+                      <Coins className="w-8 h-8 text-gold" />
+                    </div>
+                    <h3 className="font-heading text-2xl text-gold">Financial Services</h3>
+                    <p className="text-cream-dark leading-relaxed">
+                      Discreet lending and investment opportunities for those who understand
+                      the value of alternative financing.
+                    </p>
+                    <div className="pt-4 flex items-center text-gold-light text-sm font-bold">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Operation Card 5 */}
+                <div className="group relative bg-color-mahogany-dark/90 backdrop-blur border-2 border-swamp-green-dark rounded-lg p-8 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative space-y-4">
+                    <div className="w-16 h-16 bg-color-swamp-green/30 rounded-lg flex items-center justify-center border border-gold/20">
+                      <TrendingUp className="w-8 h-8 text-gold" />
+                    </div>
+                    <h3 className="font-heading text-2xl text-gold">Real Estate</h3>
+                    <p className="text-cream-dark leading-relaxed">
+                      Prime properties and strategic locations throughout the territories.
+                      Building an empire, one property at a time.
+                    </p>
+                    <div className="pt-4 flex items-center text-gold-light text-sm font-bold">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Operation Card 6 */}
+                <div className="group relative bg-color-mahogany-dark/90 backdrop-blur border-2 border-swamp-green-dark rounded-lg p-8 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative space-y-4">
+                    <div className="w-16 h-16 bg-color-swamp-green/30 rounded-lg flex items-center justify-center border border-gold/20">
+                      <Award className="w-8 h-8 text-gold" />
+                    </div>
+                    <h3 className="font-heading text-2xl text-gold">Political Influence</h3>
+                    <p className="text-cream-dark leading-relaxed">
+                      Connections in high places ensure favorable outcomes.
+                      The family has friends in every castle and council.
+                    </p>
+                    <div className="pt-4 flex items-center text-gold-light text-sm font-bold">
+                      <span>Learn More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Atmosphere Gallery Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-color-mahogany-dark" />
+
+          <div className="container relative z-10 px-4">
+            <div className="max-w-7xl mx-auto space-y-12">
+              {/* Section Header */}
+              <div className="text-center space-y-4">
+                <h2 className="font-heading text-4xl lg:text-5xl text-gold">
+                  THE SPEAKEASY EXPERIENCE
+                </h2>
+                <p className="text-lg text-cream-dark max-w-2xl mx-auto">
+                  Step into a world of elegance, mystery, and unparalleled sophistication
+                </p>
+              </div>
+
+              {/* Image Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Gallery Item 1 */}
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-lg border-2 border-swamp-green-dark shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300">
+                  <Image
+                    src="/generated/poker-table.png"
+                    alt="High Stakes Poker"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-color-shadow via-transparent to-transparent opacity-60" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-heading text-2xl text-gold mb-2">High Stakes</h3>
+                    <p className="text-cream-dark text-sm">Where fortunes are made and lost</p>
+                  </div>
+                </div>
+
+                {/* Gallery Item 2 */}
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-lg border-2 border-swamp-green-dark shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300">
+                  <Image
+                    src="/generated/wealth-luxury.png"
+                    alt="The Spoils"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-color-shadow via-transparent to-transparent opacity-60" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-heading text-2xl text-gold mb-2">The Spoils</h3>
+                    <p className="text-cream-dark text-sm">Success has its rewards</p>
+                  </div>
+                </div>
+
+                {/* Gallery Item 3 */}
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-lg border-2 border-swamp-green-dark shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300">
+                  <Image
+                    src="/generated/secret-door.png"
+                    alt="Hidden Entrance"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-color-shadow via-transparent to-transparent opacity-60" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-heading text-2xl text-gold mb-2">Hidden Entry</h3>
+                    <p className="text-cream-dark text-sm">For members only</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Quote Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-color-mahogany-dark" />
@@ -170,9 +399,78 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Why Join Section */}
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-color-shadow via-color-swamp-green-dark/30 to-color-shadow" />
+
+          <div className="container relative z-10 px-4">
+            <div className="max-w-6xl mx-auto space-y-16">
+              {/* Section Header */}
+              <div className="text-center space-y-6">
+                <h2 className="font-heading text-5xl lg:text-6xl text-gold">
+                  WHY THE SWAMP FAMILY?
+                </h2>
+                <p className="text-xl text-cream-dark max-w-3xl mx-auto leading-relaxed">
+                  When you join our organization, you're not just getting protection—you're
+                  becoming part of a legacy that spans generations.
+                </p>
+              </div>
+
+              {/* Benefits Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-color-mahogany-dark/60 backdrop-blur border-2 border-gold/30 rounded-lg p-8 space-y-4">
+                  <div className="text-4xl">🤝</div>
+                  <h3 className="font-heading text-2xl text-gold">Unwavering Loyalty</h3>
+                  <p className="text-cream-dark leading-relaxed">
+                    The family takes care of its own. Once you're in, you're in for life.
+                    We protect our members with the same ferocity we built this empire.
+                  </p>
+                </div>
+
+                <div className="bg-color-mahogany-dark/60 backdrop-blur border-2 border-gold/30 rounded-lg p-8 space-y-4">
+                  <div className="text-4xl">💰</div>
+                  <h3 className="font-heading text-2xl text-gold">Lucrative Opportunities</h3>
+                  <p className="text-cream-dark leading-relaxed">
+                    Access to exclusive business ventures and profit-sharing arrangements
+                    that would make any merchant jealous. Success breeds success.
+                  </p>
+                </div>
+
+                <div className="bg-color-mahogany-dark/60 backdrop-blur border-2 border-gold/30 rounded-lg p-8 space-y-4">
+                  <div className="text-4xl">🛡️</div>
+                  <h3 className="font-heading text-2xl text-gold">Complete Protection</h3>
+                  <p className="text-cream-dark leading-relaxed">
+                    No one touches a made member. Your business, your family, your interests—
+                    all under the umbrella of the most powerful organization in the territories.
+                  </p>
+                </div>
+
+                <div className="bg-color-mahogany-dark/60 backdrop-blur border-2 border-gold/30 rounded-lg p-8 space-y-4">
+                  <div className="text-4xl">👑</div>
+                  <h3 className="font-heading text-2xl text-gold">Elite Network</h3>
+                  <p className="text-cream-dark leading-relaxed">
+                    Connections with influential figures across all realms. From royal courts
+                    to underground markets, our reach knows no bounds.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-color-shadow via-color-swamp-green-dark/20 to-color-shadow" />
+
+          {/* Background Image */}
+          <div className="absolute inset-0 opacity-10">
+            <Image
+              src="/generated/whiskey-glass.png"
+              alt="Signature Drink"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           <div className="container relative z-10 px-4">
             <div className="max-w-3xl mx-auto text-center space-y-10">
