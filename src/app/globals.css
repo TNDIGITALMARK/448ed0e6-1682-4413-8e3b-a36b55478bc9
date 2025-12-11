@@ -1,59 +1,82 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================
+   THE SWAMP FAMILY DESIGN SYSTEM
+   1920s Speakeasy meets Fairy Tale Gangsters
+   ============================================ */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* Font System - Vintage Gangster Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-decorative: 'Cinzel Decorative', serif;
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* Core Color Palette - Dark Speakeasy Theme */
+  /* Swamp Green: Primary brand color */
+  --color-swamp-green: 100 28% 24%;      /* #2d4a2b */
+  --color-swamp-green-light: 100 28% 35%;
+  --color-swamp-green-dark: 100 28% 15%;
 
-  /* Popovers with white background */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  /* Mahogany: Rich wood tones */
+  --color-mahogany: 5 33% 22%;           /* #4a2c2a */
+  --color-mahogany-light: 5 33% 32%;
+  --color-mahogany-dark: 5 33% 12%;
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
+  /* Gold: Luxury accent */
+  --color-gold: 45 71% 52%;              /* #d4af37 */
+  --color-gold-light: 45 71% 65%;
+  --color-gold-dark: 45 71% 40%;
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Cream: Vintage text */
+  --color-cream: 60 29% 96%;             /* #f5f5dc */
+  --color-cream-dark: 60 29% 85%;
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Deep Shadow: Atmospheric darkness */
+  --color-shadow: 0 0% 10%;              /* #1a1a1a */
+  --color-shadow-light: 0 0% 20%;
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Design System Tokens - Light Theme (Speakeasy) */
+  --background: var(--color-shadow);
+  --foreground: var(--color-cream);
 
-  /* Destructive: Clean red */
-  --destructive: 0 70% 50%;
-  --destructive-foreground: 0 0% 100%;
+  --card: var(--color-mahogany-dark);
+  --card-foreground: var(--color-cream);
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  --popover: var(--color-mahogany);
+  --popover-foreground: var(--color-cream);
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  --primary: var(--color-swamp-green);
+  --primary-foreground: var(--color-cream);
 
-  /* Sidebar: Clean white with black text */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  --secondary: var(--color-mahogany);
+  --secondary-foreground: var(--color-gold);
+
+  --muted: var(--color-shadow-light);
+  --muted-foreground: var(--color-cream-dark);
+
+  --accent: var(--color-gold);
+  --accent-foreground: var(--color-shadow);
+
+  --destructive: 0 70% 40%;
+  --destructive-foreground: var(--color-cream);
+
+  --border: var(--color-swamp-green-dark);
+  --input: var(--color-mahogany-dark);
+  --ring: var(--color-gold);
+
+  /* Vintage rounded corners */
+  --radius: 0.25rem;
+
+  /* Sidebar: Dark wood theme */
+  --sidebar-background: var(--color-mahogany-dark);
+  --sidebar-foreground: var(--color-cream);
+  --sidebar-primary: var(--color-swamp-green);
+  --sidebar-primary-foreground: var(--color-cream);
+  --sidebar-accent: var(--color-mahogany);
+  --sidebar-accent-foreground: var(--color-gold);
+  --sidebar-border: var(--color-swamp-green-dark);
+  --sidebar-ring: var(--color-gold);
 }
 
 .dark {
@@ -98,35 +121,35 @@ All colors MUST be HSL.
   --container: 1400px;
   --container-center: true;
   --container-padding: 2rem;
-  
+
   /* Color System */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  
+
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-  
+
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-  
+
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-  
+
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-  
+
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-  
+
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-  
+
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-  
+
   --color-sidebar: hsl(var(--sidebar-background));
   --color-sidebar-foreground: hsl(var(--sidebar-foreground));
   --color-sidebar-primary: hsl(var(--sidebar-primary));
@@ -135,12 +158,27 @@ All colors MUST be HSL.
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
-  
+
+  /* Custom Swamp Family Colors for Tailwind */
+  --color-swamp-green: hsl(100 28% 24%);
+  --color-swamp-green-light: hsl(100 28% 35%);
+  --color-swamp-green-dark: hsl(100 28% 15%);
+  --color-mahogany: hsl(5 33% 22%);
+  --color-mahogany-light: hsl(5 33% 32%);
+  --color-mahogany-dark: hsl(5 33% 12%);
+  --color-gold: hsl(45 71% 52%);
+  --color-gold-light: hsl(45 71% 65%);
+  --color-gold-dark: hsl(45 71% 40%);
+  --color-cream: hsl(60 29% 96%);
+  --color-cream-dark: hsl(60 29% 85%);
+  --color-shadow: hsl(0 0% 10%);
+  --color-shadow-light: hsl(0 0% 20%);
+
   /* Border Radius */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
-  
+
   /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -164,40 +202,286 @@ All colors MUST be HSL.
   }
 }
 
+/* Custom Gangster Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gold-shimmer {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+  }
+}
+
+@keyframes smoke-rise {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.5);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-gold-shimmer {
+  animation: gold-shimmer 3s ease-in-out infinite;
+}
+
+.animate-smoke-rise {
+  animation: smoke-rise 8s ease-out infinite;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .font-heading {
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
 * {
   border-color: hsl(var(--border));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Minimal, clean typography */
+/* Vintage Gangster Typography System */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: hsl(var(--color-gold));
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+  font-size: 2rem;
   font-weight: 600;
-  letter-spacing: -0.025em;
-  color: hsl(var(--foreground));
 }
 
-/* Clean button styles */
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: hsl(var(--color-cream));
+}
+
+a {
+  color: hsl(var(--color-gold));
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: hsl(var(--color-gold-light));
+  text-shadow: 0 0 8px hsla(var(--color-gold), 0.6);
+}
+
+strong, b {
+  font-weight: 700;
+  color: hsl(var(--color-gold-light));
+}
+
+em, i {
+  font-style: italic;
+  color: hsl(var(--color-cream-dark));
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  background-color: hsl(var(--color-mahogany-dark));
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius);
+  font-size: 0.9em;
+}
+
+/* Button Styles - Vintage Speakeasy */
 button {
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
 }
 
-/* Subtle shadows for depth */
-.shadow-sm {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
-.shadow {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+/* Form Elements - Dark Vintage Style */
+input, textarea, select {
+  font-family: var(--font-body);
+  background-color: hsl(var(--color-mahogany-dark));
+  color: hsl(var(--color-cream));
+  border: 1px solid hsl(var(--color-swamp-green-dark));
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.shadow-md {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: hsl(var(--color-gold));
+  box-shadow: 0 0 0 3px hsla(var(--color-gold), 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+  color: hsl(var(--color-cream-dark));
+  opacity: 0.6;
+}
+
+/* Vintage Shadow System - Atmospheric Depth */
+.shadow-vintage-sm {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-vintage {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6),
+              inset 0 1px 0 rgba(212, 175, 55, 0.1);
+}
+
+.shadow-vintage-md {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7),
+              inset 0 1px 0 rgba(212, 175, 55, 0.15);
+}
+
+.shadow-vintage-lg {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8),
+              inset 0 2px 0 rgba(212, 175, 55, 0.2);
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4),
+              0 0 40px rgba(212, 175, 55, 0.2);
+}
+
+/* Texture Overlays for Vintage Feel */
+.texture-wood {
+  background-image:
+    linear-gradient(rgba(74, 44, 42, 0.9), rgba(74, 44, 42, 0.95)),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.1) 0px, transparent 1px, transparent 2px, rgba(0,0,0,0.1) 3px);
+}
+
+.texture-paper {
+  background-image:
+    linear-gradient(rgba(245, 245, 220, 0.95), rgba(245, 245, 220, 0.98)),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.05"/></svg>');
+}
+
+/* Custom Scrollbar - Vintage Style */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--color-mahogany-dark));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--color-swamp-green));
+  border-radius: var(--radius);
+  border: 2px solid hsl(var(--color-mahogany-dark));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--color-swamp-green-light));
+}
+
+/* Selection Style */
+::selection {
+  background: hsl(var(--color-gold));
+  color: hsl(var(--color-shadow));
+}
+
+::-moz-selection {
+  background: hsl(var(--color-gold));
+  color: hsl(var(--color-shadow));
 }
